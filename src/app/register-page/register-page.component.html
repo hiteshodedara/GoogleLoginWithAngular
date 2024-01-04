@@ -1,0 +1,49 @@
+<div class="container-fluid   d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card p-3 maincard  " style="width: 650px;" >
+        <div class=" d-flex justify-content-center ">
+            <label class="form_title overflow-hidden ">Register Form</label>
+        </div>
+        <form>
+            <div class="allnameinput mt-4  d-flex gap-4 flex-wrap justify-content-center ">
+                <div class="firstnamediv">
+                    <label for="firstname" class="form-label fw-bolder ">First Name</label>
+                    <input type="text" class="form-control overflow-hidden" placeholder="Enter Firstname" id="firstname"  autocomplete="off">
+                </div>
+                <div class="lastnamediv">
+                    <label for="lastname" class="form-label fw-bolder ">Last Name</label>
+                    <input type="text" class="form-control overflow-hidden" placeholder="Enter Lastname" id="lastname"  autocomplete="off">
+                </div>
+            </div>
+            <div class="mt-2  ">
+                <label for="Username" class="form-label fw-bolder ">User Name</label>
+                <input type="text" class="form-control" id="Username" placeholder="Enter Username"  autocomplete="off">
+            </div>
+            <div class="mt-2  ">
+                <label for="email" class="form-label fw-bolder ">Email Address</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter Email Address"  autocomplete="off">
+            </div>
+            <div class="mt-2">
+                <label for="exampleInputPassword1" class="form-label fw-bolder ">Password</label>
+                <div class="passwordstyle d-flex ">
+                    <input [type]="is_password_show?'text':'password'" placeholder="Enter Password" autocomplete="off"  class="form-control  " id="exampleInputPassword1">
+                    <button type="button" class="mx-1 pass_show_icon align-self-center  bg-transparent d-flex align-items-center"  (click)="on_password_show()">
+                        <i [class]="is_password_show? 'pi pi-eye-slash':'pi pi-eye' " ></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-2">
+                <label for="exampleInputPassword2" class="form-label fw-bolder ">Confirm Password</label>
+                <div class="passwordstyle d-flex ">
+                    <input [type]="is_c_password_show?'text':'password'" placeholder="Enter Confirm Password" autocomplete="off"  class="form-control  " id="exampleInputPassword2">
+                    <button type="button" class="mx-1 pass_show_icon align-self-center  bg-transparent d-flex align-items-center"  (click)="on_c_password_show()">
+                        <i [class]="is_c_password_show? 'pi pi-eye-slash':'pi pi-eye' " ></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="submitbtn d-flex justify-content-end mt-5">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

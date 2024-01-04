@@ -1,0 +1,27 @@
+<div class="container-fluid   d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card p-3 maincard  " style="width: 700px;">
+        <div class="card-header d-flex justify-content-center ">
+            <label class="form_title">Login Form</label>
+        </div>
+        <form>
+            <div class="mt-4  ">
+                <label for="Username" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="Username" placeholder="Enter Username" autocomplete="off">
+            </div>
+            <div class="my-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <div class="passwordstyle d-flex ">
+                    <input [type]="is_password_show?'text':'password'" autocomplete="off" placeholder="Enter Password"  class="form-control" id="exampleInputPassword1">
+                    <button type="button" class="mx-1 pass_show_icon align-self-center  bg-transparent d-flex align-items-center"  (click)="on_password_show()">
+                        <i [class]="is_password_show? 'pi pi-eye-slash':'pi pi-eye' " ></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="submitbtn d-flex justify-content-end mt-5">
+                <button class="border-0 bg-transparent mx-3 " id="google-btn"></button>
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
